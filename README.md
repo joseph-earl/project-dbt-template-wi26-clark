@@ -78,13 +78,14 @@ You must update three files before running dbt:
    select * from {{ source('snowbearair', 'SMITHJ_NEWS') }}
    ```
 
-Everything else (`warehouse/`, `marts/`) references staging models via `{{ ref() }}` and
-requires no changes.
+Everything else (`warehouse/`, `marts/`) references staging models via `{{ ref() }}`.
+You will need to update the sql or python files so your warehouse and marts are created and updatable via dbt project scheduling.
 
 ---
 
 ## Following the dbt Demo Video
 
+Video from the dbt Demo (reference as needed)
 [Running dbt Projects On Snowflake](https://www.youtube.com/watch?v=w7C7OkmYPFs)
 
 ### When you get to the Git Repo Setup
@@ -244,15 +245,16 @@ This layered pattern ensures broken SQL or failed tests never reach production.
 
 When you are ready to submit:
 
-1. Make sure all your changes are committed and pushed to **your fork** on GitHub
-2. Open a Pull Request from your fork back to the class repo:
+1. Make sure to change `itm327_dbt_template` to 'itm327_dbt_LASTFI`
+2. Make sure all your changes are committed and pushed to **your fork** on GitHub
+3. Open a Pull Request from your fork back to the class repo:
    - Go to your fork on GitHub
    - Click **Contribute** → **Open pull request**
    - Set the base repository to the class repo and base branch to `main`
    - Title your PR: `Submission — [Your Name]`
    - Click **Create pull request**
 
-Your instructor will review your SQL, leave inline comments, and use the PR as your grading artifact.
+Your instructor will review your SQL and Python, and use the PR as your grading artifact.
 
 ---
 
