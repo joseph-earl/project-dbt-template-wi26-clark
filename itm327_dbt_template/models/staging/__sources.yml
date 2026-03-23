@@ -15,7 +15,7 @@ sources:
       # NEWS — loaded by: news_to_sftp_dag → sftp_to_snowflake_dagv2
       # Source: Finnhub API (financial news by stock symbol)
       # ----------------------------------------------------------------
-      - name: LASTN_FI_NEWS
+      - name: EARL_J_SFTP
         description: Daily financial news articles fetched from Finnhub, one row per article.
         columns:
           - name: ID
